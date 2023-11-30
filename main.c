@@ -1,27 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+  struct point {
+  
+  int    x;
+  int    y;
 
-  struct student {
-  
-  int id;
-  char name[10];
-  float grade;
-  
-  
 };
 
 
 int main(int argc, char *argv[])
 {
-    struct student s1 ={123, "SEOYEON", 4.3};
+    struct point p1, p2;
+    int xdiff, ydiff;
+    double dist;
     
-    //다른값변경
-    s1.id = 456;
-    s1.name[0] = 'J';
-    s1.grade = 4.5;
-    //출력 
-    printf("id : %d, name : %s, grade: %f",s1.id, s1.name, s1.grade);
-
+    printf("input p1 coordinate (x y) : ");
+    scanf("%d %d", &p1.x, &p1.y);
+    
+    printf("input p1 coordinate (x y) : ");
+    scanf("%d %d", &p2.x, &p2.y);
+    
+    //distance
+    
+    xdiff = p2.x - p1.x;
+    ydiff = p2.y - p1.y;
+    dist = sqrt(xdiff*xdiff + ydiff*ydiff) ;
+    
+    
+    printf("distance : %f", dist);
+    
   system("PAUSE");	
   return 0;
 }
